@@ -2,9 +2,9 @@
 
 import rospy
 from platform.msg import ArucoData
-from vision.MarkersAnalizer import MarkersAnalizer
+from src.vision.Search_aruco import SearchAruco
 
 
-analizer = MarkersAnalizer()
+analizer = SearchAruco()
 
 rospy.spin()
