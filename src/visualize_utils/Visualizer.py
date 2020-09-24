@@ -12,7 +12,7 @@ class Visualizer:
         self.bridge = CvBridge()
         self.IMG = None
         rospy.init_node("visualizer_node")
-        img_sub = rospy.Subscriber("camera_node", Image, self.img_callback)
+        img_sub = rospy.Subscriber("image", Image, self.img_callback)
 
     def img_callback(self, data):
         if not rospy.is_shutdown():
@@ -20,7 +20,7 @@ class Visualizer:
                 cv_image = self.bridge.imgmsg_to_cv2(data, "bgr8")
                 self.IMG = cv_image
                 cv2.imshow("img", self.IMG)
-                cv2.waitKey(3)
+                cv2.waitKey(1)
             except CvBridgeError as e:
                 print(e)
 

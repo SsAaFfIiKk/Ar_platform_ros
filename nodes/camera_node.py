@@ -7,8 +7,8 @@ from sensor_msgs.msg import Image
 from cv_bridge import CvBridge
 
 # size = aruco.DICT_4X4_250
-size = aruco.DICT_5X5_250
-# size = aruco.DICT_6X6_250
+# size = aruco.DICT_5X5_250
+size = aruco.DICT_6X6_250
 
 aruco_dict = aruco.Dictionary_get(size)
 parameters = aruco.DetectorParameters_create()
