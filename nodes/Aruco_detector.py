@@ -3,21 +3,12 @@ import numpy as np
 from cv2 import aruco
 
 
-class SearchAruco:
+class ArucoDetector:
     def __init__(self, size, left_id, right_id):
         self.left_id = left_id
         self.right_id = right_id
         self.aruco_dict = aruco.Dictionary_get(size)
         self.parameters = aruco.DetectorParameters_create()
-        self.corners = []
-        self.ids = []
-        self.left_angels = []
-        self.right_angels = []
-        self.rejectedImgPoints = []
-        self.left_x = 0
-        self.left_y = 0
-        self.right_x = 0
-        self.right_y = 0
         self.detect_left = False
         self.detect_right = False
 

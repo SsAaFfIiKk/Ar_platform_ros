@@ -1,4 +1,5 @@
 <launch>
     <node pkg="platform" name="camera_node" type="camera_node.py" output="screen"/>
     <node pkg="platform" name="visualizer_node" type="visualizer_node.py" output="screen"/>
+    <node pkg="platform" name="aruco_detector_node" type="aruco_detector_node.py" output="screen"/>
 </launch>
